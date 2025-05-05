@@ -137,7 +137,7 @@ fun ClassificationResults(classifications: List<Classifications>) {
     Column {
         Text("Kết quả nhận dạng:", fontSize = 20.sp)
 
-        classifications.first().categories.forEach { category ->
+        classifications.first().categories.take(3).forEach { category ->
             Text(
                 text = "${category.label}: ${"%.2f".format(category.score * 100)}%",
                 fontSize = 16.sp,
